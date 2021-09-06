@@ -1,0 +1,85 @@
+.epidemic {
+    width: 100%;
+    overflow: hidden;
+
+
+
+    .part_one {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .part_two {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        width: 100%;
+        height: 100vh;
+
+        .left {
+            animation-name: ShowLeft;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+
+            @keyframes ShowLeft {
+                0% {
+                    transform: translateX(-400px);
+                }
+
+                100% {
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        .hideLeft {
+            animation-name: hideLeft;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+
+            @keyframes hideLeft {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-4000px);
+                }
+            }
+        }
+
+        .right {
+            animation-name: Showright;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+
+            @keyframes Showright {
+                0% {
+                    transform: translateX(400px);
+                }
+
+                100% {
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        .hideright {
+            animation-name: hideright;
+            animation-duration: 7s;
+            animation-fill-mode: forwards;
+
+            @keyframes hideright {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(4000px);
+                }
+            }
+        }
+    }
+}

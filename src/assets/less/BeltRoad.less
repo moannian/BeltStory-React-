@@ -1,0 +1,189 @@
+.beltroad {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    user-select: none;
+    margin-top: 50px;
+    width: 85vw;
+    height: 350px;
+    overflow: hidden;
+    background-color: transparent;
+    box-shadow: 0 2px 2px rgb(38, 175, 230);
+
+    .box {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        cursor: pointer;
+        width: 4250px;
+        height: 300px;
+        padding-left: 42px;
+        user-select: none;
+
+        .dot {
+
+            float: left;
+            position: relative;
+            margin-right: 85px;
+            top: 100px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-image: linear-gradient(skyblue, red);
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: skyblue;
+
+            }
+
+            i {
+                display: inline-block;
+                position: absolute;
+                left: 6px;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 2px;
+                width: 100px;
+                background-color: whitesmoke;
+            }
+
+            // 时间上下
+            .bottom_time {
+                text-align: center;
+                position: absolute;
+                top: 17px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 94px;
+                line-height: 20px;
+                font-weight: 600;
+                color: black;
+
+            }
+
+            .top_time {
+                position: absolute;
+                top: -17px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 74px;
+                line-height: 20px;
+                font-weight: 600;
+                color: black;
+
+
+            }
+
+            // 内容上下
+            .top_content {
+                position: absolute;
+                bottom: 27px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90px;
+                height: 75px;
+                background-size: 100%;
+                line-height: 20px;
+                border-radius: 3px;
+                background-position: 0 0;
+                text-align: center;
+                background-image: linear-gradient(red, skyblue);
+
+                &::after {
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: 74px;
+                    transform: translateX(-50%);
+                    width: 0;
+                    height: 0;
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                    border-top: 8px solid skyblue;
+
+                }
+            }
+
+            .bottom_content {
+                position: absolute;
+                top: 27px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90px;
+                height: 75px;
+                text-align: center;
+                border-radius: 3px;
+                background-image: linear-gradient(red, skyblue);
+                line-height: 20px;
+
+                &::after {
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: -9px;
+                    transform: translateX(-50%);
+                    width: 0;
+                    height: 0;
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                    border-bottom: 8px solid red;
+                }
+            }
+
+            &:last-child {
+                i {
+                    display: none;
+                }
+            }
+        }
+
+
+    }
+
+    .btn_left {
+        position: absolute;
+        left: 0;
+        bottom: 30px;
+        width: 80px;
+        line-height: 18px;
+        border-radius: 15px;
+        border: none;
+        outline: none;
+        background-image: linear-gradient(to right, red, skyblue);
+
+        &:active {
+            background-color: red;
+        }
+    }
+
+    .btn_right {
+        position: absolute;
+        right: 0;
+        bottom: 30px;
+        width: 80px;
+        line-height: 18px;
+        border-radius: 15px;
+        border: none;
+        outline: none;
+        background-image: linear-gradient(to left, red, skyblue);
+
+        &:active {
+            background-color: red;
+        }
+    }
+
+    .hint {
+        text-align: center;
+    }
+}

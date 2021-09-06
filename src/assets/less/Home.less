@@ -1,0 +1,78 @@
+.Home {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/Home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+
+
+    .catalog {
+        position: relative;
+        top: 44%;
+        margin: auto;
+        width: 55px;
+        height: 55px;
+        line-height: 50px;
+        border-radius: 50%;
+        font-size: 20px;
+        text-align: center;
+
+        border: 1px skyblue solid;
+
+        &:hover {
+            transform: scale(1.5);
+        }
+
+        &:active {
+            transform: scale(1.2);
+        }
+    }
+
+    .logo {
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(50, 221, 184);
+        width: 25px;
+        height: 25px;
+
+        clip-path: polygon(0 100%, 100% 0, 100% 100%);
+        transition: 2s;
+
+        &:hover {
+            background-color: rgba(226, 220, 220, .7);
+            width: 150px;
+            height: 150px;
+
+
+        }
+
+        div {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .one {
+            position: absolute;
+            right: 3px;
+            top: 45px;
+            background-image: url(../img/chizhou.jpg);
+            background-size: cover;
+        }
+
+        .two {
+            position: absolute;
+            right: 45px;
+            bottom: 3px;
+            background-image: url(../img/ls.png);
+            background-size: cover;
+
+        }
+
+    }
+
+}
